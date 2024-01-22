@@ -1,0 +1,172 @@
+/* Atomic Variables */
+:root {
+/* COLORS ================================ */
+  /* Black & White */
+  --black: #1E1E1E;
+  --white: #FFFFFF;
+
+  /* Gray */
+  --gray-9: #2e2d2e;
+  --gray-8: #5c5a5c;
+  --gray-7: #89878a;
+  --gray-6: #b7b4b8;
+  --gray-5: #e5e1e6;
+  --gray-4: #eae7eb;
+  --gray-3: #efedf0;
+  --gray-2: #f5f3f5;
+  --gray-1: #faf9fa;
+  --gray-0: #fefefe;
+  
+  /* Red */
+
+  /* Orange */
+  --orange-9: #4A331A;
+  --orange-8: #774816;
+  --orange-7: #A35D13;
+  --orange-6: #D0720F;
+  --orange-5: #FC870B;
+  --orange-4: #FD9F3C;
+  --orange-3: #FDB76D;
+  --orange-2: #FECF9D;
+  --orange-1: #FEE7CE;
+  --orange-0: #FFF3E6;
+
+  /* Yellow */
+
+  /* Green */
+
+  /* Blue */
+  --blue-9: #0a4064;
+  --blue-8: #0e6097;
+  --blue-7: #1380c9;
+  --blue-6: #18a0fb;
+  --blue-5: #46b3fc;
+  --blue-4: #74c6fd;
+  --blue-3: #a3d9fd;
+  --blue-2: #d1ecfe;
+  --blue-1: #e7f5ff;
+  --blue-0: #f2f9ff;
+
+  /* Indigo */
+
+  /* Violet */
+  --purple-9: #3a1c60;
+  --purple-8: #582a91;
+  --purple-7: #7538c1;
+  --purple-6: #9246f1;
+  --purple-5: #a86bf4;
+  --purple-4: #be90f7;
+  --purple-3: #d3b5f9;
+  --purple-2: #e9dafc;
+  --purple-1: #f4ecfe;
+  --purple-0: #f9f5fe;
+
+  /* Pink */
+  --pink-9: #300f1a;
+  --pink-8: #601e34;
+  --pink-7: #8f2d4d;
+  --pink-6: #bf3c67;
+  --pink-5: #ef4b81;
+  --pink-4: #f26f9a;
+  --pink-3: #f593b3;
+  --pink-2: #fcdbe6;
+  --pink-1: #fdedf2;
+
+/* GRADIENTS ================================ */
+  --gradient-5: linear-gradient(82deg, #FF7A7A 0%, #FC8900 100%);
+  --gradient-2: linear-gradient(82deg, rgba(255, 122, 122, 0.20) 0%, rgba(252, 137, 0, 0.20) 100%);
+  --gradient-1: linear-gradient(82deg, rgba(255, 122, 122, 0.10) 0%, rgba(252, 137, 0, 0.10) 100%);
+
+/* TYPOGRAPHY =============================== */
+  --font-size-body-xl: ;
+  --font-size-body-l: ;
+  --font-size-body-m: ;
+  --font-size-body-s: ;
+  --font-size-body-xs: ;
+
+  --line-height-l: 1.6;
+  --line-height-m: 1.4;
+  --line-height-s: 1.2;
+  --line-height-heading: 1;
+  --line-height-body: 1.5;
+
+  --font-weight-xl: 700;
+  --font-weight-l: 600;
+  --font-weight-m: 500;
+  --font-weight-s: 400;
+  --font-weight-xs: 300;
+
+/* GAPS & SPACING ================================= */
+  /* Used for spacing properties like gap, margin, padding, etc. */
+  --gap-xxl: 8rem;
+  --gap-xl: 4rem;
+  --gap-l: 2rem;
+  --gap-m: 1rem;
+  --gap-s: 0.5rem;
+  --gap-xs: 0.25rem;
+  --gap-xxs: 0.125rem;
+
+/* BORDERS ================================= */
+  --br-xxl: 999px;
+  --br-xl:  var(--gap-xl);
+  --br-l:   var(--gap-l);
+  --br-m:   var(--gap-m);
+  --br-s:   var(--gap-s);
+  --br-xs:  var(--gap-xs);
+  --br-xxs: var(--gap-xxs);
+
+  --border-l: 4px solid currentcolor;
+  --border-m: 2px solid currentcolor;
+  --border-s: 1px solid currentcolor;
+
+/* WIDTHS ==================================== */
+  --max-w-xxl: 96rem;
+  --max-w-xl:  72rem;
+  --max-w-l:   45rem;
+  --max-w-m:   36rem;
+  --max-w-s:   27rem;
+  --max-w-xs:  18rem;
+  --max-w-xxs: 9rem;
+
+/* MOTOIN ================================ */
+  --transition-l: all 0.5s;
+  --transition-m: all 0.2s;
+  --transition-s: all 0.1s;
+  
+/* GRID ====================================== */
+  /* 1 Column */
+  --grid-1-col: 1fr;
+
+  /* 2 Columns */
+  --grid-2-cols: repeat(2, 1fr);
+  --grid-col-1-1: 1fr 1fr;
+  --grid-col-1-2: 1fr 2fr;
+  --grid-col-2-1: 2fr 1fr;
+
+  /* 3 Columns */
+  --grid-3-cols: repeat(3, 1fr);
+  --grid-col-1-1-1: 1fr 1fr 1fr;
+  --grid-col-1-2-1: 1fr 2fr 1fr;
+  --grid-col-2-1-1: 2fr 1fr 1fr;
+  --grid-col-1-1-2-: 1fr 1fr 2fr;
+
+  /* 4 Columns */
+  --grid-4-cols: 1fr 1fr 1fr 1fr;
+  --grid-col-1-1-1-1: 1fr 1fr 1fr 1fr;
+  --grid-col-1-2-2-1: 1fr 2fr 2fr 1fr;
+
+  /* Note: More complicated grid layouts should be managed on a case by case basis. */
+
+/* Z Index ================================= */
+  --z-max: 999999px;
+  --z-5: 5;
+  --z-4: 4;
+  --z-3: 3;
+  --z-2: 2;
+  --z-1: 1;
+  --z-0: 0;
+
+/* MISC =================================== */
+  
+}
+
