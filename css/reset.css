@@ -1,0 +1,13 @@
+@import url("vars.css");
+
+/* RESET */
+
+h1, h2, h3, h4, h5, h6,
+p, article, ul, ol {
+    margin: 0px;
+}
+
+a {
+    transition: var(--transition);
+    color: inherit;
+}

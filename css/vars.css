@@ -106,6 +106,8 @@
   --gap-xs: 0.25rem;
   --gap-xxs: 0.125rem;
 
+  --gap-page: 5vw;
+
 /* BORDERS ================================= */
   --br-xxl: 999px;
   --br-xl:  var(--gap-xl);
