@@ -14,9 +14,9 @@
 .bg-gray-1 {background-color: var(--gray-1);}
 
 /*-=-=-= TYPOGRAPHY =-=-=-*/
-.display-l { font-size: max(4vw, 4rem); line-height: var(--line-height-heading); font-weight: 500;}
-.display-m { font-size: max(3vw, 3rem); line-height: var(--line-height-heading); font-weight: 500;}
-.display-s { font-size: max(2.5vw, 2.5rem); line-height: var(--line-height-heading); font-weight: 600;}
+.display-l { font-size: clamp(4rem, 4vw, 6rem); line-height: var(--line-height-heading); font-weight: 500;}
+.display-m { font-size: clamp(3rem, 3vw, 5rem); line-height: var(--line-height-heading); font-weight: 500;}
+.display-s { font-size: clamp(2.5rem, 2.5vw, 4rem); line-height: var(--line-height-heading); font-weight: 600;}
 
 .heading-l { font-size: 2.25rem; line-height: var(--line-height-heading); font-weight: 600;}
 .heading-m { font-size: 2rem; line-height: var(--line-height-heading); font-weight: 600;}
@@ -38,8 +38,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: var(--gap-l);
-    padding: var(--gap-xl) var(--gap-page);
+    gap: var(--v-gap-section);
+    padding: var(--padding-section);
+    width: 100%;
 }
 
 .content-wrap {
@@ -48,6 +49,7 @@
     margin: 0 auto;
 }
 
+/* Gap shorthand (no prefix to specify direction) */
 .gap-xxl { gap:var(--gap-xxl) !important; }
 .gap-xl  { gap:var(--gap-xl)  !important; }
 .gap-l   { gap:var(--gap-l)   !important; }
@@ -56,15 +58,23 @@
 .gap-xs  { gap:var(--gap-xs)  !important; }
 .gap-xxs { gap:var(--gap-xxs) !important; }
 
+/* Vertical gap "v-" */
+.v-gap-xxl { column-gap:var(--gap-xxl) !important; }
+.v-gap-xl  { column-gap:var(--gap-xl)  !important; }
+.v-gap-l   { column-gap:var(--gap-l)   !important; }
+.v-gap-m   { column-gap:var(--gap-m)   !important; }
+.v-gap-s   { column-gap:var(--gap-s)   !important; }
+.v-gap-xs  { column-gap:var(--gap-xs)  !important; }
+.v-gap-xxs { column-gap:var(--gap-xxs) !important; }
 
-
-/*   --gap-xxl: 8rem;
-  --gap-xl: 4rem;
-  --gap-l: 2rem;
-  --gap-m: 1rem;
-  --gap-s: 0.5rem;
-  --gap-xs: 0.25rem;
-  --gap-xxs: 0.125rem; */
+/* Horizontal gap "h-" */
+.h-gap-xxl { row-gap:var(--gap-xxl) !important; }
+.h-gap-xl  { row-gap:var(--gap-xl)  !important; }
+.h-gap-l   { row-gap:var(--gap-l)   !important; }
+.h-gap-m   { row-gap:var(--gap-m)   !important; }
+.h-gap-s   { row-gap:var(--gap-s)   !important; }
+.h-gap-xs  { row-gap:var(--gap-xs)  !important; }
+.h-gap-xxs { row-gap:var(--gap-xxs) !important; }
 
 
 
@@ -76,18 +86,21 @@
     overflow-wrap: break-word;
 }
 
-.grid-1-col { grid-template-columns: var(--grid-1-col); }
-.grid-2-col { grid-template-columns: var(--grid-col-1-1); }
-.grid-3-col { grid-template-columns: var(--grid-col-1-1-1); }
+.grid-col-1 { grid-template-columns: var(--grid-col-1); }
+.grid-col-2 { grid-template-columns: var(--grid-col-1-1); }
+.grid-col-3 { grid-template-columns: var(--grid-col-1-1-1); }
 
 /* Flex */
-.flex-col {
+/* Note: confusing going from writing "flex-" to "f-" when modifying classes. Should standardize to be "f" or "F" ? */
+.flex-col,
+.f-col {
     display: flex;
     flex-direction: column;
     gap: var(--gap-m);
 }
 
-.flex-row {
+.flex-row,
+.f-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -115,7 +128,6 @@
 .list-wrap-col,
 .list-wrap-row {
     display: flex;
-    gap: var(--gap-s);
     padding: 0px;
     list-style: none;
 }
@@ -123,6 +135,7 @@
 .list-wrap,
 .list-wrap-col {
     flex-direction: column;
+    gap: var(--gap-s);
 }
 
 .list-wrap-row {
@@ -131,3 +144,51 @@
 }
 
 
+/* Elements */
+
+/* Tooltip */
+.tooltip-target {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    max-width: 300px;
+    width: 90vw;
+    background-color: white;
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: var(--padding-s);
+    box-shadow: 0px 2px 8px 0px #00000026;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    z-index: -1;
+    transition: opacity var(--transition-m) 
+                display var(--transition-m)
+                z-index var(--transition-m);
+  }
+  
+  .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  
+  .tooltip-target:hover .tooltip {
+    display:block;
+    opacity: 1;
+    z-index: 2;
+  }

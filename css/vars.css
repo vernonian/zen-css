@@ -1,4 +1,8 @@
 /* Atomic Variables */
+/* TODO
+ * make is to property names are without the "-" between spaces ... ei --max-w becomes --maxw-m and --grid-col-l becomes --gridcol-l
+ shishkebab case slows down typing, so it should be limited only when neccessary.
+*/
 :root {
 /* COLORS ================================ */
   /* Black & White */
@@ -90,23 +94,37 @@
   --line-height-heading: 1;
   --line-height-body: 1.5;
 
-  --font-weight-xl: 700;
-  --font-weight-l: 600;
-  --font-weight-m: 500;
-  --font-weight-s: 400;
-  --font-weight-xs: 300;
+  /* Font weight is denoted with --font-w */
+  --font-w-xl: 700;
+  --font-w-l:  600;
+  --font-w-m:  500;
+  --font-w-s:  400;
+  --font-w-xs: 300;
 
 /* GAPS & SPACING ================================= */
   /* Used for spacing properties like gap, margin, padding, etc. */
-  --gap-xxl: 8rem;
-  --gap-xl: 4rem;
-  --gap-l: 2rem;
-  --gap-m: 1rem;
-  --gap-s: 0.5rem;
-  --gap-xs: 0.25rem;
-  --gap-xxs: 0.125rem;
+  --gap-xxl: max(8rem, 10vw);
+  --gap-xl:  max(4rem, 5vw);
+  --gap-l:   max(2rem, 2.5vw);
+  --gap-m:   max(1rem, 1.25vw);
+  --gap-s:   max(0.5rem, 0.75vw);
+  --gap-xs:  max(0.25rem, 0.375vw);
+  --gap-xxs: max(0.125rem, 0.1425vw);
 
   --gap-page: 5vw;
+  --v-gap-section: clamp(var(--gap-m), 5vh, var(--gap-xl));
+  --h-gap-section: max(var(--gap-s), 5vw);
+  --gap-0: 0px;
+
+  --padding-section: var(--v-gap-section) var(--h-gap-section);
+  --padding-xxl: var(--gap-xxl);
+  --padding-xl:  var(--gap-xl);
+  --padding-l:   var(--gap-l);
+  --padding-m:   var(--gap-m);
+  --padding-s:   var(--gap-s) var(--gap-m);
+  --padding-xs:  var(--gap-xs) var(--gap-s);
+  --padding-xxs: var(--gap-xxs) var(--gap-xs);
+  --padding-0: 0px;
 
 /* BORDERS ================================= */
   --br-xxl: 999px;
@@ -130,6 +148,8 @@
   --max-w-xs:  18rem;
   --max-w-xxs: 9rem;
 
+  --max-w-page: 72rem;
+
 /* MOTOIN ================================ */
   --transition-l: all 0.5s;
   --transition-m: all 0.2s;
@@ -137,16 +157,16 @@
   
 /* GRID ====================================== */
   /* 1 Column */
-  --grid-1-col: 1fr;
+  --grid-col-1: 1fr;
 
   /* 2 Columns */
-  --grid-2-cols: repeat(2, 1fr);
+  --grid-col-2: repeat(2, 1fr);
   --grid-col-1-1: 1fr 1fr;
   --grid-col-1-2: 1fr 2fr;
   --grid-col-2-1: 2fr 1fr;
 
   /* 3 Columns */
-  --grid-3-cols: repeat(3, 1fr);
+  --grid-col-3: repeat(3, 1fr);
   --grid-col-1-1-1: 1fr 1fr 1fr;
   --grid-col-1-2-1: 1fr 2fr 1fr;
   --grid-col-2-1-1: 2fr 1fr 1fr;
