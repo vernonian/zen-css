@@ -1,0 +1,88 @@
+
+@import url('./index.css');
+/* This file contains classes for generic flexbox and grid based layouts. */
+
+/* FLEXBOX */
+/* Generic flex classes*/
+.f-col, .f-row {
+  display: flex;
+  gap: var(--gap-m);
+  flex-wrap: wrap;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+.f-row {
+  flex-direction: row;
+}
+
+/* 
+  Flex classes are labeled "f-[align-items]-[justify-content]" 
+  Some classes have shorthand, using the first letter of their respective keyword (f-start-start -> f-s-s)
+*/
+/* Align items "start" */
+.f-start-start,  .f-s-s { align-items: flex-start; justify-content: flex-start; }
+.f-start-center, .f-s-c { align-items: flex-start; justify-content: center; }
+.f-start-end,    .f-s-e { align-items: flex-start; justify-content: flex-end; }
+.f-start-between, .f-s-b { align-items: flex-start; justify-content: space-between; width: 100%;}
+.f-start-around { align-items: flex-start; justify-content: space-around; width: 100%;}
+.f-start-evenly { align-items: flex-start; justify-content: space-evenly; width: 100%;}
+
+/* Align items "center" */
+.f-center-start,   .f-c-s { align-items: center; justify-content: flex-start; }
+.f-center-center,  .f-c-c { align-items: center; justify-content: center; }
+.f-center-end,     .f-c-e { align-items: center; justify-content: flex-end; }
+.f-center-between, .f-c-b { align-items: center; justify-content: space-between; width: 100%;}
+.f-center-around  { align-items: center; justify-content: space-around; width: 100%;}
+.f-center-evenly  { align-items: center; justify-content: space-evenly; width: 100%;}
+
+/* Align items "end" */
+.f-end-start,   .f-e-s { align-items: flex-end; justify-content: flex-start; }
+.f-end-center,  .f-e-c { align-items: flex-end; justify-content: center; }
+.f-end-end,     .f-e-e { align-items: flex-end; justify-content: flex-end; }
+.f-end-between, .f-e-b { align-items: flex-end; justify-content: space-between; width: 100%;}
+.f-end-around  { align-items: flex-end; justify-content: space-around; width: 100%;}
+.f-end-evenly  { align-items: flex-end; justify-content: space-evenly; width: 100%;}
+
+/* Flex shorthand classes where[label] is applied to align-items and justify-content */
+.f-start { align-items: start; justify-content: start; }
+.f-center { align-items: center; justify-content: center; }
+.f-end { align-items: end; justify-content: end; }
+
+/* Modifying classes */
+.f-no-wrap {flex-wrap: nowrap}
+.f-wrap { flex-wrap: wrap;}
+
+/* GRIDS */
+/* Generic grid classes */
+.grid,
+.g-col-1, .g-col-2,
+.g-col-3, .g-col-4 {
+  display: grid;
+  gap: var(--gap-l);
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Generic grid column controller classes */
+.g-col-1 { grid-template-columns: repeat(1, 1fr); }
+.g-col-2 { grid-template-columns: repeat(2, 1fr); }
+.g-col-3 { grid-template-columns: repeat(3, 1fr); }
+.g-col-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Basic media queries */
+@media screen and (max-width: 768px) {
+  .g-col-2, .g-col-3 { grid-template-columns: repeat(1, 1fr); }
+  .g-col-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Utility gaps */
+.gap-xxl, .g-xxl { gap: var(--gap-xxl); }
+.gap-xl, .g-xl  { gap: var(--gap-xl); }
+.gap-l, .g-l   { gap: var(--gap-l); }
+.gap-m, .g-m   { gap: var(--gap-m); }
+.gap-s, .g-s   { gap: var(--gap-s); }
+.gap-xs, .g-xs  { gap: var(--gap-xs); }
+.gap-xxs, .g-xxs { gap: var(--gap-xxs); }

@@ -1,0 +1,91 @@
+:root {
+  /* COLORS ================================ */
+    /* Black & White */
+    --black: #1E1E1E;
+    --white: #FFFFFF;
+  
+    /* Gray/Grey */
+    --gray-9: #2e2d2e;
+    --gray-8: #5c5a5c;
+    --gray-7: #89878a;
+    --gray-6: #b7b4b8;
+    --gray-5: #e5e1e6;
+    --gray-4: #eae7eb;
+    --gray-3: #efedf0;
+    --gray-2: #f5f3f5;
+    --gray-1: #faf9fa;
+    --gray-0: #fefefe;
+
+    --grey-9: var(--gray-9);
+    --grey-8: var(--gray-8);
+    --grey-7: var(--gray-7);
+    --grey-6: var(--gray-6);
+    --grey-5: var(--gray-5);
+    --grey-4: var(--gray-4);
+    --grey-3: var(--gray-3);
+    --grey-2: var(--gray-2);
+    --grey-1: var(--gray-1);
+    --grey-0: var(--gray-0);
+    
+    /* Brand */
+        
+    /* Red */
+  
+    /* Orange */
+    --orange-9: #4A331A;
+    --orange-8: #774816;
+    --orange-7: #A35D13;
+    --orange-6: #D0720F;
+    --orange-5: #FC870B;
+    --orange-4: #FD9F3C;
+    --orange-3: #FDB76D;
+    --orange-2: #FECF9D;
+    --orange-1: #FEE7CE;
+    --orange-0: #FFF3E6;
+  
+    /* Yellow */
+  
+    /* Green */
+  
+    /* Blue */
+    --blue-9: #0a4064;
+    --blue-8: #0e6097;
+    --blue-7: #1380c9;
+    --blue-6: #18a0fb;
+    --blue-5: #46b3fc;
+    --blue-4: #74c6fd;
+    --blue-3: #a3d9fd;
+    --blue-2: #d1ecfe;
+    --blue-1: #e7f5ff;
+    --blue-0: #f2f9ff;
+  
+    /* Indigo */
+  
+    /* Violet */
+    --purple-9: #3a1c60;
+    --purple-8: #582a91;
+    --purple-7: #7538c1;
+    --purple-6: #9246f1;
+    --purple-5: #a86bf4;
+    --purple-4: #be90f7;
+    --purple-3: #d3b5f9;
+    --purple-2: #e9dafc;
+    --purple-1: #f4ecfe;
+    --purple-0: #f9f5fe;
+  
+    /* Pink */
+    --pink-9: #300f1a;
+    --pink-8: #601e34;
+    --pink-7: #8f2d4d;
+    --pink-6: #bf3c67;
+    --pink-5: #ef4b81;
+    --pink-4: #f26f9a;
+    --pink-3: #f593b3;
+    --pink-2: #fcdbe6;
+    --pink-1: #fdedf2;
+  
+  /* GRADIENTS ================================ */
+    --gradient-5: linear-gradient(82deg, #FF7A7A 0%, #FC8900 100%);
+    --gradient-2: linear-gradient(82deg, rgba(255, 122, 122, 0.20) 0%, rgba(252, 137, 0, 0.20) 100%);
+    --gradient-1: linear-gradient(82deg, rgba(255, 122, 122, 0.10) 0%, rgba(252, 137, 0, 0.10) 100%);
+}  

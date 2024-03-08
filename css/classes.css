@@ -1,36 +1,4 @@
-@import url("vars.css");
-
-/*-=-=-= BACKGROUNDS =-=-=- */
-.bg-black {background-color: var(--black);}
-.bg-white {background-color: var(--white);}
-.bg-gray-9 {background-color: var(--gray-9);}
-.bg-gray-8 {background-color: var(--gray-8);}
-.bg-gray-7 {background-color: var(--gray-7);}
-.bg-gray-6 {background-color: var(--gray-6);}
-.bg-gray-5 {background-color: var(--gray-5);}
-.bg-gray-4 {background-color: var(--gray-4);}
-.bg-gray-3 {background-color: var(--gray-3);}
-.bg-gray-2 {background-color: var(--gray-2);}
-.bg-gray-1 {background-color: var(--gray-1);}
-
-/*-=-=-= TYPOGRAPHY =-=-=-*/
-.display-l { font-size: clamp(4rem, 4vw, 6rem); line-height: var(--line-height-heading); font-weight: 500;}
-.display-m { font-size: clamp(3rem, 3vw, 5rem); line-height: var(--line-height-heading); font-weight: 500;}
-.display-s { font-size: clamp(2.5rem, 2.5vw, 4rem); line-height: var(--line-height-heading); font-weight: 600;}
-
-.heading-l { font-size: 2.25rem; line-height: var(--line-height-heading); font-weight: 600;}
-.heading-m { font-size: 2rem; line-height: var(--line-height-heading); font-weight: 600;}
-.heading-s { font-size: 1.75rem; line-height: var(--line-height-heading); font-weight: 600;}
-.heading-xs { font-size: 1.5rem; line-height: var(--line-height-heading); font-weight: 500;}
-.heading-xxs { font-size: 1.25rem; line-height: var(--line-height-heading); font-weight: 500;}
-
-.body-l { font-size: 1.2rem; line-height: var(--line-height-body); font-weight: 400;}
-.body-m { font-size: 1rem; line-height: var(--line-height-body); font-weight: 400;}
-.body-s { font-size: 0.9rem; line-height: var(--line-height-body); font-weight: 400;}
-.body-xs { font-size: 0.8rem; line-height: var(--line-height-body); font-weight: 400;}
-
-
-
+@import url('./index.css');
 
 /*-=-=-= LAYOUT =-=-=-*/
 .section-wrap {
@@ -48,81 +16,6 @@
     max-width: var(--max-w-xl);
     margin: 0 auto;
 }
-
-/* Gap shorthand (no prefix to specify direction) */
-.gap-xxl { gap:var(--gap-xxl) !important; }
-.gap-xl  { gap:var(--gap-xl)  !important; }
-.gap-l   { gap:var(--gap-l)   !important; }
-.gap-m   { gap:var(--gap-m)   !important; }
-.gap-s   { gap:var(--gap-s)   !important; }
-.gap-xs  { gap:var(--gap-xs)  !important; }
-.gap-xxs { gap:var(--gap-xxs) !important; }
-
-/* Vertical gap "v-" */
-.v-gap-xxl { column-gap:var(--gap-xxl) !important; }
-.v-gap-xl  { column-gap:var(--gap-xl)  !important; }
-.v-gap-l   { column-gap:var(--gap-l)   !important; }
-.v-gap-m   { column-gap:var(--gap-m)   !important; }
-.v-gap-s   { column-gap:var(--gap-s)   !important; }
-.v-gap-xs  { column-gap:var(--gap-xs)  !important; }
-.v-gap-xxs { column-gap:var(--gap-xxs) !important; }
-
-/* Horizontal gap "h-" */
-.h-gap-xxl { row-gap:var(--gap-xxl) !important; }
-.h-gap-xl  { row-gap:var(--gap-xl)  !important; }
-.h-gap-l   { row-gap:var(--gap-l)   !important; }
-.h-gap-m   { row-gap:var(--gap-m)   !important; }
-.h-gap-s   { row-gap:var(--gap-s)   !important; }
-.h-gap-xs  { row-gap:var(--gap-xs)  !important; }
-.h-gap-xxs { row-gap:var(--gap-xxs) !important; }
-
-
-
-/* Grid */
-.grid-wrap {
-    display: grid;
-    gap: var(--gap-l);
-    width: 100%;
-    overflow-wrap: break-word;
-}
-
-.grid-col-1 { grid-template-columns: var(--grid-col-1); }
-.grid-col-2 { grid-template-columns: var(--grid-col-1-1); }
-.grid-col-3 { grid-template-columns: var(--grid-col-1-1-1); }
-
-/* Flex */
-/* Note: confusing going from writing "flex-" to "f-" when modifying classes. Should standardize to be "f" or "F" ? */
-.flex-col,
-.f-col {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-m);
-}
-
-.flex-row,
-.f-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap-m);
-}
-
-/* flex classes are labeled "f-[align-items]-[justify-content]" */
-.f-start-start { align-items: flex-start; justify-content: flex-start; }
-.f-start-center { align-items: flex-start; justify-content: center; }
-.f-start-between { align-items: flex-start; justify-content: space-between; }
-.f-start-end { align-items: flex-start; justify-content: end; }
-
-.f-center-start { align-items: center; justify-content: flex-start; }
-.f-center-center { align-items: center; justify-content: center; }
-.f-center-between { align-items: center; justify-content: space-between; }
-.f-center-center { align-items: center; justify-content: end; }
-
-.f-end-start { align-items: flex-end; justify-content: flex-start; }
-.f-end-center { align-items: flex-end; justify-content: center; }
-.f-end-between { align-items: flex-end; justify-content: space-between; }
-.f-end-center { align-items: flex-end; justify-content: end; }
-
 
 .list-wrap,
 .list-wrap-col,
@@ -142,7 +35,6 @@
     flex-direction: row;
     gap: var(--gap-m);
 }
-
 
 /* Elements */
 
@@ -185,7 +77,6 @@
     border-style: solid;
     border-color: white transparent transparent transparent;
   }
-  
   
   .tooltip-target:hover .tooltip {
     display:block;
