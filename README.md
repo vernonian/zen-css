@@ -13,18 +13,18 @@ To go along with Brad Frost's metaphor of the atom, the CSS variable can be thou
 | Zen CSS | Atomic Design |
 | ------- | ------- |
 | CSS variables | Sub-atomic particles |
-| Low-level classes | Atoms |
-| Mid-level classes | Molecules |
-| High-level classes | Organisms |
+| Element classes | Atoms |
+| Layout classes | Molecules |
+| Wrapper classes | Organisms |
 | Components | Templates |
 | Pages | Pages |
 
 
-Low-level classes refers to elements that are usually only children such as links, inputs, and text (Frost's atom).
+"Element classes" refers to elements that are usually only children such as links, inputs, and text (Frost's atom).
 
-Mid-level classes refers to elements that handle layout such as divs, sections, and lists with low-level elements within them (the molecule).
+"Layout"classes" refers to elements that handle layout such as divs, sections, and lists with low-level elements within them (the molecule).
 
-High-level classes refers to elements that serve as the parent containing element, such as sections, headers, and footers (the organism).
+"Wrapper classes" refers to elements that serve as the parent containing element, such as sections, headers, and footers (the organism).
 
 ### What's included?
 
@@ -40,9 +40,9 @@ High-level classes refers to elements that serve as the parent containing elemen
 | `???.css` | This project is a work in progress |
 
 
-## Composing basics
+## Basic composing
 
-At its core, Zen CSS is a variable-driven approach to web styling. 
+At its core, Zen CSS is a variable-driven approach to web styling. These variables are used in a handlful of reusable and flexible classes which are types right into the HTML you are writing.
 
 So then, what are the variables we're using? Variables in CSS are nothing new and we use them here to help to remember less when composing HTML pages and custom styles.
 
@@ -97,7 +97,7 @@ Flags for font family:
 - `-sans`: Specifies the sans-serif font
 - `-mono`: Specifies the monospace font
 
-## CSS Files
+## CSS file deep dive
 
 Zen CSS contains a few main files:
 |  File  |  Summary  |
