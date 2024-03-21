@@ -1,5 +1,11 @@
+/* #=#=# Typography #=#=# */
 /* Typographic variables and classes */
+
 :root {
+  --fontfamily-serif: serif;
+  --fontfamily-sans: sans-serif;
+  --fontfamily-mono: monospace;
+
   --lineheight-heading: 1.1;
   --lineheight-body: 1.5;
 
@@ -16,7 +22,10 @@ h1, h2, h3, h4, h5, h6,
 p, article, ul, ol {
   margin: 0px;
 }
-body {font-size: 1rem;}
+body {
+  font-family: var(--fontfamily-sans);
+  font-size: 1rem;
+}
 
 /* Display styles */
 .display-1, .display-2, .display-3 {

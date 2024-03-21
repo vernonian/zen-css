@@ -1,4 +1,6 @@
-/* Atomic Variables */
+/* #=#=# VARIABLES #=#=# */
+/* Variable definitions used throughout styling */
+
 /* TODO
  * make is to property names are without the "-" between spaces ... ei --max-w becomes --maxw-m and --grid-col-l becomes --gridcol-l
  shishkebab case slows down typing, so it should be limited only when neccessary.

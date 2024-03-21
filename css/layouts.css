@@ -1,8 +1,10 @@
+/* #=#=# LAYOUTS #=#=# */
+/* Styles for generic flexbox and grid based layouts */
+
 
 @import url('./index.css');
-/* This file contains classes for generic flexbox and grid based layouts. */
 
-/* FLEXBOX */
+/* #=#=# FLEXBOX #=#=# */
 /* Generic flex classes*/
 .f-col, .f-row {
   display: flex;
@@ -52,10 +54,10 @@
 .f-end { align-items: end; justify-content: end; }
 
 /* Modifying classes */
-.f-no-wrap {flex-wrap: nowrap}
+.f-nowrap {flex-wrap: nowrap}
 .f-wrap { flex-wrap: wrap;}
 
-/* GRIDS */
+/* #=#=# GRIDS #=#=# */
 /* Generic grid classes */
 .grid,
 .g-col-1, .g-col-2,
@@ -73,9 +75,13 @@
 .g-col-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* Basic media queries */
+@media screen and (max-width: 1024px) {
+  .g-col-2, .g-col-3 { grid-template-columns: 1fr; }
+  .g-col-4 { grid-template-columns: 1fr 1fr; }
+}
+
 @media screen and (max-width: 768px) {
-  .g-col-2, .g-col-3 { grid-template-columns: repeat(1, 1fr); }
-  .g-col-4 { grid-template-columns: repeat(2, 1fr); }
+  .g-col-4 { grid-template-columns: 1fr; }
 }
 
 /* Utility gaps */

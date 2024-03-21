@@ -1,6 +1,9 @@
+/* #=#=# CONTAINERS/WRAPS #=#=# */
+/* Section and content containers and wrappers */
+
 @import url('./index.css');
 
-/*-=-=-= LAYOUT =-=-=-*/
+/*-=-=-= Content Wrappers =-=-=-*/
 .section-wrap {
     display: flex;
     flex-direction: column;
