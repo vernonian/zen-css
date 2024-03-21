@@ -6,9 +6,9 @@
  shishkebab case slows down typing, so it should be limited only when neccessary.
 */
 :root {
-  /* GAPS & SPACING ================================= */
+  /* Spacing Units */
 
-  /* Primitive sizing */
+  /* Primitives used for spacing properties like gap, margin, padding, etc. */
   --xxl: max(8rem, 10vw);
   --xl:  max(4rem, 5vw);
   --l:   max(2rem, 2.5vw);
@@ -16,41 +16,28 @@
   --s:   max(0.5rem, 0.75vw);
   --xs:  max(0.25rem, 0.375vw);
   --xxs: max(0.125rem, 0.1425vw);
+  --zero: 0px;
 
-
-  /* Used for spacing properties like gap, margin, padding, etc. */
-  --gap-xxl: var(--xxl);
-  --gap-xl:  var(--xl);
-  --gap-l:   var(--l);
-  --gap-m:   var(--m);
-  --gap-s:   var(--s);
-  --gap-xs:  var(--xs);
-  --gap-xxs: var(--xxs);
-  --gap-0: 0px;
-
-  /* Customize these ? */
-  --gap-page: 5vw;
-  --v-gap-section: clamp(var(--gap-m), 5vh, var(--gap-xl));
-  --h-gap-section: max(var(--gap-s), 5vw);
-  
-  /* Padding for elemment types */
-  --padding-section: var(--v-gap-section) var(--h-gap-section);
+   
+  /* Padding for element types */
+  --padding-section: clamp(var(--m), 5vh, var(--xl)) max(var(--s), 5vw);
   --padding-inline: var(--xs) var(--s);
 
-/* BORDERS ================================= */
-  --br-xxl: 999px;
-  --br-xl:  var(--gap-xl);
-  --br-l:   var(--gap-l);
-  --br-m:   var(--gap-m);
-  --br-s:   var(--gap-s);
-  --br-xs:  var(--gap-xs);
-  --br-xxs: var(--gap-xxs);
+  /* Border Units */
+  --br-max: 999999px;
+  --br-xxl: var(--xxl);
+  --br-xl:  var(--xl);
+  --br-l:   var(--l);
+  --br-m:   var(--m);
+  --br-s:   var(--s);
+  --br-xs:  var(--xs);
+  --br-xxs: var(--xxs);
 
   --border-l: 4px solid currentcolor;
   --border-m: 2px solid currentcolor;
   --border-s: 1px solid currentcolor;
 
-/* WIDTHS ==================================== */
+  /* Width Units */
   --maxwidth-xxl: 96rem;
   --maxwidth-xl:  72rem;
   --maxwidth-l:   45rem;
@@ -61,21 +48,23 @@
 
   --maxwidth-page: 72rem;
 
-/* MOTOIN ================================ */
+  /* Time units */
+  --time-l: 0.4s;
+  --time-m: 0.2s;
+  --time-s: 0.1s;
+
+  /* Motion */
   --transition-l: all 0.4s;
   --transition-m: all 0.2s;
   --transition-s: all 0.1s;
   
-/* Z Index ================================= */
+  /* Z Index */
   --z-max: 999999px;
   --z-5: 5;
   --z-4: 4;
   --z-3: 3;
   --z-2: 2;
   --z-1: 1;
-  --z-0: 0;
-
-/* MISC =================================== */
-  
+  --z-0: 0;  
 }
 

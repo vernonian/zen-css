@@ -1,14 +1,13 @@
 /* #=#=# LAYOUTS #=#=# */
 /* Styles for generic flexbox and grid based layouts */
 
+@import url('./zen.css');
 
-@import url('./index.css');
-
-/* #=#=# FLEXBOX #=#=# */
+/* #=# FLEXBOX #=# */
 /* Generic flex classes*/
 .f-col, .f-row {
   display: flex;
-  gap: var(--gap-m);
+  gap: var(--m);
   flex-wrap: wrap;
 }
 
@@ -57,13 +56,13 @@
 .f-nowrap {flex-wrap: nowrap}
 .f-wrap { flex-wrap: wrap;}
 
-/* #=#=# GRIDS #=#=# */
+/* #=# GRIDS #=# */
 /* Generic grid classes */
 .grid,
 .g-col-1, .g-col-2,
 .g-col-3, .g-col-4 {
   display: grid;
-  gap: var(--gap-l);
+  gap: var(--l);
   width: 100%;
   overflow-wrap: break-word;
 }
@@ -84,11 +83,11 @@
   .g-col-4 { grid-template-columns: 1fr; }
 }
 
-/* Utility gaps */
-.gap-xxl, .g-xxl { gap: var(--gap-xxl); }
-.gap-xl, .g-xl  { gap: var(--gap-xl); }
-.gap-l, .g-l   { gap: var(--gap-l); }
-.gap-m, .g-m   { gap: var(--gap-m); }
-.gap-s, .g-s   { gap: var(--gap-s); }
-.gap-xs, .g-xs  { gap: var(--gap-xs); }
-.gap-xxs, .g-xxs { gap: var(--gap-xxs); }
+/* #=# Gap utilities #=# */
+.gap-xxl, .g-xxl { gap: var(--xxl); }
+.gap-xl, .g-xl  { gap: var(--xl); }
+.gap-l, .g-l   { gap: var(--l); }
+.gap-m, .g-m   { gap: var(--m); }
+.gap-s, .g-s   { gap: var(--s); }
+.gap-xs, .g-xs  { gap: var(--xs); }
+.gap-xxs, .g-xxs { gap: var(--xxs); }

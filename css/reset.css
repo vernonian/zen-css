@@ -1,7 +1,7 @@
 /* #=#=# RESET #=#=# */
 /* Basic style resets */
 
-@import url("./variables/vars.css");
+@import url("./variables/units.css");
 
 /* Creates top padding for anchor links */
 * { 
