@@ -1,33 +1,74 @@
 # Zen CSS
 
-## What is Zen.css?
-
 A variable-driven CSS library with an atomic approach that is robust, simple, and flexible enough to style website systems.
 
-### Variable-driven
+## Overview
 
-Rewritting styles over and over again will always be tedious. Variables in CSS is nothing new and here, we are using them to have to remember less when composing HTML pages and custom styles.
+### What is Zen.css?
+
+Zen CSS is a system of CSS files created with the [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/) methodology. It defines variables which combine to make classes used for  elements, layouts, and sections. 
+
+To go along with Brad Frost's metaphor of the atom, the CSS variable can be thought of as the sub-atomic particles that create the atom: protons, neurons, and electrons. They have also been called "design tokens". These three particles give us the designed "atom" in the same way that CSS variables are used to create the designed HTML child element. Let's not get hung up on the semantics though.
+
+| Zen CSS | Atomic Design |
+| ------- | ------- |
+| CSS variables | Sub-atomic particles |
+| Low-level classes | Atoms |
+| Mid-level classes | Molecules |
+| High-level classes | Organisms |
+| Components | Templates |
+| Pages | Pages |
+
+
+Low-level classes refers to elements that are usually only children such as links, inputs, and text (Frost's atom).
+
+Mid-level classes refers to elements that handle layout such as divs, sections, and lists with low-level elements within them (the molecule).
+
+High-level classes refers to elements that serve as the parent containing element, such as sections, headers, and footers (the organism).
+
+### What's included?
+
+|  File  |  Summary  |
+| ------ | --------- |
+| `zen.css` | Main file for importing all stylesheets |
+| `reset.css`| Basic style resets |
+| `units.css` | Variable definitions used throughout styles: mainly unit values |
+| `colors.css`  | Color and gradient styles |
+| `typogrpahy.css` | Text defaults, variables, and classes |
+| `layouts.css` | Flex and grid layout classes |
+| `wrappers.css` | Containers, content wrappers, etc. |
+| `???.css` | This project is a work in progress |
+
+
+## Composing basics
+
+At its core, Zen CSS is a variable-driven approach to web styling. 
+
+So then, what are the variables we're using? Variables in CSS are nothing new and we use them here to help to remember less when composing HTML pages and custom styles.
+
+### Variables and naming
 
 As a rule of thumb, variable names are named after the CSS property that is represents with no spaces:
 
 - `gap` becomes `--gap`
 - `font-family` becomes `--fontfamily`
 - `max-width` becomes `--maxwidth`
-- `gap` becomes `--gap`
 
 However, some are abbreviated:
 
-- `border-radius` becomes `--br-`
+- `border-radius` becomes `--br`
+
+There are also some primitives that don't have any CSS property associated with it, which we call "flags modifiers".
 
 ### Flag modifiers
 
-Flag modifiers are used create a robust and simple ecosystem of variable and class names.
+Flag modifiers (or "flags" for short) are used create a robust and simple ecosystem of variable and class names.
 
 Throught the variable and class declarations, we often provide flags or modifiers to the end of variable or class names. This is done to handle multiple versions of a style based on a certain use case.
 
 Flags range from `xxl` to `xxs`, contextual keywords, and numbers.
 
-#### Sizing flag key
+#### Sizing flags
 
 - `-xxl`: Double extra large
 - `-xl`: Extra large
@@ -38,16 +79,18 @@ Flags range from `xxl` to `xxs`, contextual keywords, and numbers.
 - `-xxs`: Double extra small
 - `-zero `: The number zero, as in `0px`
 
-#### Misc flag key
+#### Misc flags
 
 Flags for font weight:
+
 - `-bl`: Black
 - `-b`: Bold
 - `-sb`: Semi-bold
 - `-m`: Medium
 - `-r`: Regular
 - `-l`: Light
- Note that the `-m` and `-l` are not the same for the sizing flags as they are contextual to the font weight property.
+
+Note that the `-m` and `-l` are not the same for the sizing flags as they are contextual to the font weight property.
   
 Flags for font family:
 - `-serif`: Specifies the serif font
@@ -72,11 +115,15 @@ You may notice that each additional file builds off the previous ones. For examp
 
 This is intentional as Zen CSS is being created with atomic design and 'bottom-up' thinking.
 
+---
+
 ### `zen.css`
 
-`zen.css` is the projects 'index' file. 
+`zen.css` is the project's 'index' file. 
 
 It imports all relevant stylesheets so other files only has to `@import url('./[path-to]/zen.css')` and not any of the other files. 
+
+---
 
 ### `reset.css`
 
@@ -84,32 +131,38 @@ Reseting browser defaults is a good idea. That is what `reset.css` is for.
 
 If you have your own, paste your resetting styles here or link to your reset file in `zen.css`.
 
+---
+
 ### `units.css`
 
 The `unit.css` file contains various units used for spacing and timing. 
+
+---
 
 ### `colors.css`
 
 The `colors.css` file contains variable definitions for colors and gradients.
 
-Colors are based on color ramps generated from (https://colorampgen.vercel.app/)[ColoRampGen]. There are 10 flags for colors, going from zero to nine. 
+Colors are based on color ramps generated from [ColorRampGen](https://colorampgen.vercel.app/). There are 10 flags for colors, going from zero to nine. 
 
 Zero (`-0`) is the lightest shade. Nine (`-9`) is the darkest shade. Five (`-5`) is the 'base' color.
 
 #### Example
 
 ```
-  --primary-0: #ffeceb;
-  --primary-1: #ffd9d7;
-  --primary-2: #ffb3af;
-  --primary-3: #ff8d86;
-  --primary-4: #ff675e;
-  --primary-5: #ff4136;
-  --primary-6: #cc342b;
-  --primary-7: #992720;
-  --primary-8: #661a16;
-  --primary-9: #330d0b;
+--primary-0: #ffeceb;
+--primary-1: #ffd9d7;
+--primary-2: #ffb3af;
+--primary-3: #ff8d86;
+--primary-4: #ff675e;
+--primary-5: #ff4136;
+--primary-6: #cc342b;
+--primary-7: #992720;
+--primary-8: #661a16;
+--primary-9: #330d0b;
 ```
+
+---
 
 ### `typography.css`
 
@@ -127,6 +180,8 @@ These styles are for huge and decorative text. Use them wherever you want to mak
 
 This class uses the numnerical flags `-l`, `-m`, `-s`.
 
+---
+
 #### `.heading`
 
 Used for normal text headings. They correspond to the differen `html` header elements but can be used on any element.
@@ -134,6 +189,8 @@ Used for normal text headings. They correspond to the differen `html` header ele
 ##### Flags
 
 This class uses the numnerical flags `-1`, `-2`, `-3`, `-4`,`-5`, `-6`.
+
+---
 
 #### `.body`
 
@@ -152,15 +209,13 @@ This class uses the numnerical flags `-l`, `-m`, `-s`, `-xs`.
 <p class="body-m">...</p>
 ```
 
-### `layouts.css`
+---
 
-This file contains only classes which are used for controlling layouts.
+### `layouts.css`
 
 The two easiest and most responsive ways to create layouts with CSS is using flexboxes and grids. 
 
-For both flex and grid styles, there are classes that act as generic classes that give the element the bare minumum to turn that element into either a flex or grid parent element.
-
-Then, there are an expanded set of styles of modifying classes writen with the same type of flag modifiers.
+For both, there are classes that act as generic classes that give the element the bare minumum to turn that element into either a flex or grid parent element. Then, there are an expanded set of styles of modifying classes writen with the same type of flag modifiers.
 
 Alas, not every layout is possible within this file. More sophisitcated grids should be handled ad-hoc with id selectors. 
 
@@ -195,6 +250,8 @@ The following is a flexbox row with two flexbox columns within it.
 </div>
 ```
 
+---
+
 #### Grids
 
 Grid classes are all denoted by the `.g` class, with many flags to control certain grid related properties. 
@@ -202,7 +259,6 @@ Grid classes are all denoted by the `.g` class, with many flags to control certa
 As grids can be complex, there are a few predefined, basic classes to handle one, two, three, and four equal column layouts.
 
 Use the `-col` and `-#` flag to specify the type of grid parent: `.g-col-2` creates a two column grid.
-
 
 ```
 .grid,
@@ -232,6 +288,8 @@ The following is a grid with four columns within it.
   <div class="f-col">...</div>
 </div>
 ```
+
+---
 
 ### `wrappers.css`
 
@@ -279,6 +337,8 @@ Here we have a basic section/content set up.
 ```
 
 Note that even though `.section-wrap` has the word 'section' in it, you can and should use the class on any element that you want.
+
+---
 
 ### `.list-wrap`
 
