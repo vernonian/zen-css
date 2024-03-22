@@ -76,3 +76,8 @@ body {
   .heading-5, .h5 {font-size: 1.266rem;}
   .heading-6, .h6 {font-size: 1.125rem;}
 }
+
+/* Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
