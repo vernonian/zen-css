@@ -3,3 +3,42 @@
 
 @import url('../zen.css');
 
+.button-link {
+  background-color: var(--secondary-5);
+  color: var(--white);
+  transition: background-color 0.2s color 0.2s;
+  padding: var(--gap-s) var(--gap-m);
+  border-radius: var(--br-l);
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.button-link:hover {
+  background-color: var(--purple-5);
+}
+
+.button-link.primary {
+  background-color: var(--primary-5);
+}
+
+.button-link.primray:hover {
+  background-color: var(--secondary-5);
+}
+
+.button-link svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.button-link.secondary {
+  background-color: var(--white);
+  color: var(--secondary-5) !important;
+}
+
+.button-link.secondary:hover {
+  background-color: var(--secondary-0);
+  color: var(--secondary-6);
+}
