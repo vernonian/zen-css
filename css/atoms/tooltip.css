@@ -1,5 +1,7 @@
 /* #=#=# Tooltip #=#=# */
 
+@import url('./zen.css');
+
 .tooltip-target {
   position: relative;
   cursor: pointer;
