@@ -6,8 +6,8 @@
 .bento {
   display: flex;
   flex-direction: column;
-  gap: var(--l);
-  padding: var(--l);
+  gap: var(--m);
+  padding: var(--m);
   color: inherit;
   background-color: var(--white);
   border-radius: var(--s);
@@ -23,7 +23,15 @@
   background-color: var(--secondary-5);
 }
 
+.bento.l,
+.bento.large {
+  gap: var(--l);
+  padding: var(--l);
+}
+
+.bento.s,
 .bento.small {
-  gap: var(--m);
-  padding: var(--m);
+  gap: var(--s);
+  padding: var(--s);
+  border-radius: var(--xs);
 }

@@ -25,12 +25,14 @@ p, article, ul, ol {
 body {
   font-family: var(--fontfamily-sans);
   font-size: 1rem;
+  color: var(--textcolor-body);
 }
 
 /* Display styles */
 .display-1, .display-2, .display-3 {
   line-height: var(--lineheight-heading);
   font-weight: 500;
+  color: var(--textcolor-heading);
 }
 
 .display-1 {font-size: clamp(4.2rem, 4vw, 5.6rem);}
@@ -41,6 +43,7 @@ body {
 .heading-1, .heading-2, .heading-3,
 .heading-4, .heading-5, .heading-6 {
   line-height: var(--lineheight-heading);
+  color: var(--textcolor-heading);
 }
 
 .heading-1, .heading-2, .heading-3 {font-weight: 600;}

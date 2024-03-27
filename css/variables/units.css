@@ -1,10 +1,6 @@
 /* #=#=# VARIABLES #=#=# */
 /* Variable definitions used throughout styling */
 
-/* TODO
- * make is to property names are without the "-" between spaces ... ei --max-w becomes --maxw-m and --grid-col-l becomes --gridcol-l
- shishkebab case slows down typing, so it should be limited only when neccessary.
-*/
 :root {
   /* Spacing Units */
 
@@ -18,7 +14,6 @@
   --xxs: max(0.125rem, 0.1425vw);
   --zero: 0px;
 
-   
   /* Padding for element types */
   --padding-section: clamp(var(--m), 5vh, var(--xl)) max(var(--s), 5vw);
   --padding-inline: var(--xs) var(--s);

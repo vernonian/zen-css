@@ -48,9 +48,9 @@
 .f-end-evenly  { align-items: flex-end; justify-content: space-evenly; width: 100%;}
 
 /* Flex shorthand classes where[label] is applied to align-items and justify-content */
-.f-start { align-items: start; justify-content: start; }
-.f-center { align-items: center; justify-content: center; }
-.f-end { align-items: end; justify-content: end; }
+.f-start, .f-s { align-items: start; justify-content: start; }
+.f-center, .f-c { align-items: center; justify-content: center; }
+.f-end, .f-e { align-items: end; justify-content: end; }
 
 /* Modifying classes */
 .f-nowrap {flex-wrap: nowrap}
