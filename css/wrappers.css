@@ -1,40 +1,45 @@
-/* #=#=# WRAPPERS #=#=# */
-/* Section and content wrappers and containers */
+/* ### WRAPPERS ### */
 
-@import url('./zen.css');
+@import url('../variables/units.css');
 
-/* Content wrappers */
-.section-wrap,
-.content-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: var(--m);
-  width: 100%;
-}
-
+/* === SECTION WRAPS === */
 .section-wrap {
-    gap: var(--v-gap-section);
+    display: flex;
+    flex-direction: column;
+    gap: var(--l);
+    width: 100%;
     padding: var(--padding-section);
 }
 
-.content-wrap {
-    max-width: var(--max-w-xl);
+/* === CONTENT WRAPS === */
+.content-wrap,
+.content-wrap-wide,
+.content-wrap-thin {
+    display: flex;
+    flex-direction: column;
+    gap: var(--l);
+    width: 100%;
     margin: 0 auto;
-}
+  }
 
-/* List wrappers */
+/* Add max widths for content wraps */
+.content-wrap { max-width: 1090px; }
+.content-wrap-wide { max-width: 1400px; }
+.content-wrap-thin { max-width: 720px; }
+
+/* === LIST WRAPS === */
 .list-wrap,
 .list-wrap-col,
 .list-wrap-row {
     display: flex;
     padding: 0px;
     list-style: none;
+    gap: var(--s);
 }
 
 .list-wrap,
 .list-wrap-col {
     flex-direction: column;
-    gap: var(--s);
 }
 
 .list-wrap-row {
