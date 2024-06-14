@@ -5,6 +5,10 @@
   /* Black & White */
   --black: #1e1e1e;
   --white: #ffffff;
+  
+  /* Text */
+  --textcolor-heading: var(--black);
+  --textcolor-body: var(--gray-8);
 
   /* Gray/Grey */
   --gray-9: #2e2d2e;
@@ -29,17 +33,29 @@
   --grey-1: var(--gray-1);
   --grey-0: var(--gray-0);
 
+  /* Interactive */
+  --interactive-0: #e9f3ff;
+  --interactive-1: #d2e8ff;
+  --interactive-2: #a6d1ff;
+  --interactive-3: #79b9ff;
+  --interactive-4: #4da2ff;
+  --interactive-5: #208BFF;
+  --interactive-6: #1a6fcc;
+  --interactive-7: #135399;
+  --interactive-8: #0d3866;
+  --interactive-9: #061c33;
+
   /* Primary */
-  --primary-0: #ffeceb;
-  --primary-1: #ffd9d7;
-  --primary-2: #ffb3af;
-  --primary-3: #ff8d86;
-  --primary-4: #ff675e;
-  --primary-5: #ff4136;
-  --primary-6: #cc342b;
-  --primary-7: #992720;
-  --primary-8: #661a16;
-  --primary-9: #330d0b;
+  --primary-0: #fff4e9;
+  --primary-1: #ffead2;
+  --primary-2: #ffd4a6;
+  --primary-3: #ffbf79;
+  --primary-4: #ffa94d;
+  --primary-5: #FF9420;
+  --primary-6: #cc761a;
+  --primary-7: #995913;
+  --primary-8: #663b0d;
+  --primary-9: #331e06;
 
   /* Secondary */
   --secondary-0: #fffae6;
@@ -53,19 +69,64 @@
   --secondary-8: #665200;
   --secondary-9: #332900;
 
-  /* Accent */
-  --accent-0: #e6eaff;
-  --accent-1: #ccd6ff;
-  --accent-2: #99acff;
-  --accent-3: #6683fe;
-  --accent-4: #3359fe;
-  --accent-5: #0030fe;
-  --accent-6: #0026cb;
-  --accent-7: #001d98;
-  --accent-8: #001366;
-  --accent-9: #000a33;
+  /* Tertiary */
+  --tertiary-0: #e6eaff;
+  --tertiary-1: #ccd6ff;
+  --tertiary-2: #99acff;
+  --tertiary-3: #6683fe;
+  --tertiary-4: #3359fe;
+  --tertiary-5: #0030FE;
+  --tertiary-6: #0026cb;
+  --tertiary-7: #001d98;
+  --tertiary-8: #001366;
+  --tertiary-9: #000a33;
 
-  /* Text */
-  --textcolor-heading: var(--black);
-  --textcolor-body: var(--gray-8);
+  /* Info */
+  --info-0: #e6edf9;
+  --info-1: #cddbf3;
+  --info-2: #9cb7e7;
+  --info-3: #6a92db;
+  --info-4: #396ecf;
+  --info-5: #074AC3;
+  --info-6: #063b9c;
+  --info-7: #042c75;
+  --info-8: #031e4e;
+  --info-9: #010f27;
+  
+  /* Success */
+  --success-0: #e7f9f2;
+  --success-1: #cef3e5;
+  --success-2: #9ee8ca;
+  --success-3: #6ddcb0;
+  --success-4: #3dd195;
+  --success-5: #0CC57B;
+  --success-6: #0a9e62;
+  --success-7: #07764a;
+  --success-8: #054f31;
+  --success-9: #022719;
+  
+  /* Warning */
+  --warning-0: #fffae6;
+  --warning-1: #fff5cc;
+  --warning-2: #ffeb99;
+  --warning-3: #fee266;
+  --warning-4: #fed833;
+  --warning-5: #FECE00;
+  --warning-6: #cba500;
+  --warning-7: #987c00;
+  --warning-8: #665200;
+  --warning-9: #332900;
+  
+
+  /* Danger */
+  --danger-0: #fcebea;
+  --danger-1: #f8d7d5;
+  --danger-2: #f1afab;
+  --danger-3: #ea8682;
+  --danger-4: #e35e58;
+  --danger-5: #DC362E;
+  --danger-6: #b02b25;
+  --danger-7: #84201c;
+  --danger-8: #581612;
+  --danger-9: #2c0b09;
 }

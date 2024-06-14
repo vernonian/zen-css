@@ -1,0 +1,87 @@
+/* ### TEXT.CSS ### */
+
+/* === VARIABLES === */
+:root {
+  /* Font families */
+--fontfamily-serif: serif;
+--fontfamily-sans: sans-serif;
+--fontfamily-mono: monospace;
+
+/* Line spacing */
+--lineheight-heading: 1.1;
+--lineheight-body: 1.5;
+
+/* Font weights */
+--fontweight-bl: 800; /* Black */
+--fontweight-b:  700; /* Bold */
+--fontweight-sb: 600; /* Semi Bold */
+--fontweight-m:  500; /* Medium */
+--fontweight-r:  400; /* Regular */
+--fontweight-l:  300; /* Light */
+}
+
+/* === RESET === */
+h1, h2, h3, h4, h5, h6,
+p, article, ul, ol { margin: 0px; }
+body {
+  font-family: var(--fontfamily-sans);
+  font-size: 1rem;
+  color: var(--textcolor-body);
+}
+
+/* === DISPLAY STYLES === */
+.display-1 { font-size: clamp(4.2rem, 4vw, 5.6rem); }
+.display-2 { font-size: clamp(3.2rem, 3vw, 4.2rem); }
+.display-3 { font-size: clamp(2.986rem, 2.5vw, 3.2rem); }
+
+.display-1, .display-2, .display-3 {
+  line-height: var(--lineheight-heading);
+  font-weight: 500;
+  color: var(--textcolor-heading);
+}
+
+/* === HEADING STYLES === */
+.heading-1, .h1 { font-size: 2.986rem; }
+.heading-2, .h2 { font-size: 2.488rem; }
+.heading-3, .h3 { font-size: 2.074rem; }
+.heading-4, .h4 { font-size: 1.728rem; }
+.heading-5, .h5 { font-size: 1.44rem; }
+.heading-6, .h6 { font-size: 1.2rem; }
+
+.heading-1, .heading-2, .heading-3,
+.heading-4, .heading-5, .heading-6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: var(--lineheight-heading);
+  color: var(--textcolor-heading);
+}
+
+.heading-1, .heading-2, .heading-3, .h1, .h2, .h3 { font-weight: 600; }
+.heading-4, .heading-5, .heading-6, .h4, .h5, .h6 { font-weight: 500; }
+
+/* === BODY STYLES === */
+.body-1 { font-size: 1rem; }
+.body-2 { font-size: 0.83rem; }
+.body-3 { font-size: 0.69rem }
+
+.body-1, .body-2, .body-3 {
+  line-height: var(--lineheight-body);
+  font-weight: var(--fontweight-r);
+}
+
+/* === TEXT ALIGNMENT === */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* === MOBILE TEXT STYLES === */
+@media screen and (max-width: 768px) {
+  .display-1 { font-size: 3.815rem; }
+  .display-2 { font-size: 3.052rem; }
+  .display-3 { font-size: 2.441rem; }
+  .heading-1, .h1 { font-size: 2.027rem; }
+  .heading-2, .h2 { font-size: 1.802rem; }
+  .heading-3, .h3 { font-size: 1.602rem; }
+  .heading-4, .h4 { font-size: 1.424rem; }
+  .heading-5, .h5 { font-size: 1.266rem; }
+  .heading-6, .h6 { font-size: 1.125rem; }
+}
