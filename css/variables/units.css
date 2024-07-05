@@ -1,5 +1,4 @@
-/* #=#=# VARIABLES #=#=# */
-/* Variable definitions used throughout styling */
+/* ### UNIT VARIABLES ### */
 
 :root {
   /* Spacing Units */
@@ -33,6 +32,10 @@
   --border-s: 1px solid currentcolor;
 
   /* Width Units */
+  --content-width: 1200px;
+  --content-wide: 1440px;
+  --content-thin: 760px;
+
   --maxwidth-xxl: 96rem;
   --maxwidth-xl:  72rem;
   --maxwidth-l:   45rem;

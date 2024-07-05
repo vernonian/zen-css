@@ -1,5 +1,4 @@
-/* #=#=# COLORS #=#=# */
-/* Colors and gradients */
+/* ### COLOR VARIABLES ### */
 
 :root {
   /* Black & White */
@@ -8,42 +7,19 @@
   
   /* Text */
   --textcolor-heading: var(--black);
-  --textcolor-body: var(--gray-8);
+  --textcolor-body: var(--neutral-8);
 
-  /* Gray/Grey */
-  --gray-9: #2e2d2e;
-  --gray-8: #5c5a5c;
-  --gray-7: #89878a;
-  --gray-6: #b7b4b8;
-  --gray-5: #e5e1e6;
-  --gray-4: #eae7eb;
-  --gray-3: #efedf0;
-  --gray-2: #f5f3f5;
-  --gray-1: #faf9fa;
-  --gray-0: #fefefe;
-
-  --grey-9: var(--gray-9);
-  --grey-8: var(--gray-8);
-  --grey-7: var(--gray-7);
-  --grey-6: var(--gray-6);
-  --grey-5: var(--gray-5);
-  --grey-4: var(--gray-4);
-  --grey-3: var(--gray-3);
-  --grey-2: var(--gray-2);
-  --grey-1: var(--gray-1);
-  --grey-0: var(--gray-0);
-
-  /* Interactive */
-  --interactive-0: #e9f3ff;
-  --interactive-1: #d2e8ff;
-  --interactive-2: #a6d1ff;
-  --interactive-3: #79b9ff;
-  --interactive-4: #4da2ff;
-  --interactive-5: #208BFF;
-  --interactive-6: #1a6fcc;
-  --interactive-7: #135399;
-  --interactive-8: #0d3866;
-  --interactive-9: #061c33;
+  /* Neutral */
+  --neutral-9: #2e2d2e;
+  --neutral-8: #5c5a5c;
+  --neutral-7: #89878a;
+  --neutral-6: #b7b4b8;
+  --neutral-5: #e5e1e6;
+  --neutral-4: #eae7eb;
+  --neutral-3: #efedf0;
+  --neutral-2: #f5f3f5;
+  --neutral-1: #faf9fa;
+  --neutral-0: #fefefe;
 
   /* Primary */
   --primary-0: #fff4e9;
@@ -81,6 +57,18 @@
   --tertiary-8: #001366;
   --tertiary-9: #000a33;
 
+  /* Interactive */
+  --interactive-0: #e9f3ff;
+  --interactive-1: #d2e8ff;
+  --interactive-2: #a6d1ff;
+  --interactive-3: #79b9ff;
+  --interactive-4: #4da2ff;
+  --interactive-5: #208BFF;
+  --interactive-6: #1a6fcc;
+  --interactive-7: #135399;
+  --interactive-8: #0d3866;
+  --interactive-9: #061c33;
+
   /* Info */
   --info-0: #e6edf9;
   --info-1: #cddbf3;
@@ -117,7 +105,6 @@
   --warning-8: #665200;
   --warning-9: #332900;
   
-
   /* Danger */
   --danger-0: #fcebea;
   --danger-1: #f8d7d5;
