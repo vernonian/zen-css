@@ -1,5 +1,3 @@
-@import url("../variables/colors.css");
-
 /* ### BACKGROUND & TEXT COLORS ### 
   > Backgruond color classes are prefixed with "bg-" following the color's variable name.
   > Depending on your color variables, the text for darker colors should be white (or lighter) 

@@ -1,7 +1,5 @@
 /* ### WRAPPERS ### */
 
-@import url('../variables/units.css');
-
 /* === SECTION WRAPS === */
 .section-wrap {
     display: flex;
