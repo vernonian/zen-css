@@ -1,0 +1,24 @@
+/* ### ELEVATION VARIABLES ### 
+  > This file requires and uses variables from ./variables/units.css 
+  > These variables are to be used as 'box-shadow' property values
+*/
+
+:root {
+  /* Sunken */
+  --elevation-sunken-2: inset 0px var(--xxs) var(--xxs) rgba(30, 30, 30, 0.1), inset 0px 0px var(--xxs) rgba(30, 30, 30, 0.1);
+  --elevation-sunken-1: inset 0px 1px 1px rgba(30, 30, 30, 0.1), inset 0px 0px 1px rgba(30, 30, 30, 0.1);
+
+  /* Overlfow */
+  --elevation-overflow: inset -4px 0px 6px rgba(30, 30, 30, 0.1);
+
+  /* Raised */
+  --elevation-raised-1: 0px 1px 1px rgba(30, 30, 30, 0.1), 0px 0px 1px rgba(30, 30, 30, 0.1);
+  --elevation-raised-2: 0px var(--xxs) var(--xxs) rgba(30, 30, 30, 0.1), 0px 0px var(--xxs) rgba(30, 30, 30, 0.1);
+  --elevation-raised-3: 0px var(--xs) var(--xs) rgba(30, 30, 30, 0.1), 0px 0px var(--xs) rgba(30, 30, 30, 0.1);
+  --elevation-raised-4: 0px var(--s) var(--s) rgba(30, 30, 30, 0.1), 0px 0px var(--s) rgba(30, 30, 30, 0.1);
+
+  /* Overlay & modals */
+  --elevation-overlay-1: 0px var(--m) var(--m) rgba(30, 30, 30, 0.1), 0px 0px var(--m) rgba(30, 30, 30, 0.1);
+  --elevation-overlay-2: 0px var(--l) var(--l) rgba(30, 30, 30, 0.1), 0px 0px var(--l) rgba(30, 30, 30, 0.1);
+  --elevation-overlay-3: 0px var(--xl) var(--xl) rgba(30, 30, 30, 0.1), 0px 0px var(--xl) rgba(30, 30, 30, 0.1);
+}

@@ -1,0 +1,29 @@
+/* ### ELEVATION CLASSES ### */
+
+/* Set background colors */
+.sunken-2 { background-color: var(-neutral-0); }
+
+.sunken-1, .overflow,
+.raised-1, .raised-2, .raised-3, .raised-4,
+.overlay-1, .overlay-2, .overlay3 {
+  background-color: var(--white);
+}
+
+/* === Set Box Shadows === */
+/* Sunken */
+.sunken-2 { box-shadow: var(--elevation-sunken-2); }
+.sunken-1 { box-shadow: var(--elevation-sunken-1); }
+
+/* Overflowing content */
+.overflow { box-shadow: var(--elevation-overflow); overflow-x: scroll; overflow-y: hidden; }
+
+/* Raised */
+.raised-1 { box-shadow: var(--elevation-raised-1); }
+.raised-2 { box-shadow: var(--elevation-raised-2); }
+.raised-3 { box-shadow: var(--elevation-raised-3); }
+.raised-4 { box-shadow: var(--elevation-raised-4); }
+
+/* Overlay */
+.overlay-1 { box-shadow: var(--elevation-overlay-1); }
+.overlay-2 { box-shadow: var(--elevation-overlay-2); }
+.overlay-3 { box-shadow: var(--elevation-overlay-3); }
