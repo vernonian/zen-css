@@ -1,0 +1,28 @@
+{
+  "name": "zen-css",
+  "version": "1.0.0",
+  "description": "An essentialist, class-based CSS library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "zen-css-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vernonian/zen-css.git"
+  },
+  "keywords": [
+    "CSS"
+  ],
+  "author": "Evelyn Vernon | Vernonian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vernonian/zen-css/issues"
+  },
+  "homepage": "https://github.com/vernonian/zen-css#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "webpack": "^5.92.1"
+  }
+}
