@@ -1,0 +1,53 @@
+@import url('../zen.css');
+/*
+  This file includes classes for spacing
+  > Gaps "gap-"
+  > Padding "pad-"
+  > Margin "mar-
+  > Max widths "mw-"
+*/
+
+:root {
+  --mw-modifier: 10; /* Used to calculate max width (mw-) widths based on unit variables */
+}
+
+/* ### ELEMENT SPACING ### 
+  Since most of the spacing should be controlled with flexbox and gap classes, 
+  the need for applying padding and margin to elements directly doesn't come of frequently. 
+  This is why the classes for those properties are not as robust here. Add at your discretion.
+*/
+
+/* === Gaps ===
+  > Gap utlitiy classes are *not* written with a shorthand of "g-" as to not be confused with grid classes.
+  > Chain these classes to flex and grid elements to control layout.
+*/
+.gap-xxl  { gap: var(--xxl); }
+.gap-xl   { gap: var(--xl); }
+.gap-l    { gap: var(--l); }
+.gap-m    { gap: var(--m); }
+.gap-s    { gap: var(--s); }
+.gap-xs   { gap: var(--xs); }
+.gap-xxs  { gap: var(--xxs); }
+.gap-zero { gap: 0px; }
+
+/* === Padding === */
+.pad-m { padding: var(--m); }
+
+/* === Margin === */
+.mar-m { margin: var(--m); }
+
+/* Top margin (-t) & bottom margin (-b) */
+.mar-t-m { margin-top: var(--m); }
+.mar-b-m { margin-bottom: var(--m); }
+
+/* ### MAX WIDTHS ### 
+  These classes should be used to control the width of regular elements (not content-wrap or overall page section layouts)
+*/
+.mw-xxl { max-width: calc( var(--xxl) * var(--mw-modifier) ); }
+.mw-xl  { max-width: calc( var(--xl) * var(--mw-modifier) ); }
+.mw-l   { max-width: calc( var(--l) * var(--mw-modifier) ); }
+.mw-m   { max-width: calc( var(--m) * var(--mw-modifier) ); }
+.mw-s   { max-width: calc( var(--s) * var(--mw-modifier) ); }
+.mw-xs  { max-width: calc( var(--xs) * var(--mw-modifier) ); }
+.mw-xxs { max-width: calc( var(--xxs) * var(--mw-modifier) ); }
+

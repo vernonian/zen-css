@@ -39,6 +39,13 @@ To go along with Brad Frost's metaphor of the atom, the CSS variable can be thou
 | `wrappers.css` | Containers, content wrappers, etc. |
 | `???.css` | This project is a work in progress |
 
+### Comment conventions ###
+
+Leveraging CSS comments, you'll find different 'levels' of comments:
+
+- `/* ### TOP LEVEL HEADING ### */` is used to designate sections
+- `/* === Second Level Heading === */` is sued to designate sub-section
+- `/* Regular comment providing information or usage notes */` is used for regular comment text, notes, or to provide context
 
 ## Basic composing
 

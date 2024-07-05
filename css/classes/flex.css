@@ -1,0 +1,63 @@
+/* ### FLEXBOX ### 
+  Styles for generic flexbox and grid based layouts. All flex-based classes are prefixed with "f-".
+*/
+
+/* === Core Flex Classes === */
+.f-col, .f-row {
+  display: flex;
+  gap: var(--m);
+  flex-wrap: wrap;
+}
+
+/* Use .f-col for flex columns */
+.f-col { flex-direction: column; }
+
+/* Use .f-col for flex rows. Note that by default flex children will wrap. */
+.f-row { flex-direction: row; flex-basis:  0 0 auto;}
+
+/* === Flex Wrapping === */
+.f-nowrap {flex-wrap: nowrap}
+.f-wrap { flex-wrap: wrap; }
+
+/* === Basic Flexbox Layouts === 
+  > The convention for using flexboxes is to also set the container's 'align-items' and 'justify-content' properties.
+  > These classes are labeled "f-[align-items]-[justify-content]" to easily apply these properties. Doing so creates practically any layout you want.
+  > Some classes have shorthand, using the first letter of their respective keyword (f-start-start -> f-s-s)
+  > Not all align-items and justify-content values are present, these are just the ones that are most common
+  > For classes that use "space-bewteen", "space-around", and "space-evenly" we also give 100% width to the element
+*/
+
+/* Align items "start" & justify content variants */
+.f-start-start,  .f-s-s { align-items: flex-start; justify-content: flex-start; }
+.f-start-center, .f-s-c { align-items: flex-start; justify-content: center; }
+.f-start-end,    .f-s-e { align-items: flex-start; justify-content: flex-end; }
+.f-start-between, .f-s-b { align-items: flex-start; justify-content: space-between; width: 100%;}
+.f-start-around, .f-s-a { align-items: flex-start; justify-content: space-around; width: 100%;}
+.f-start-evenly, .f-s-even { align-items: flex-start; justify-content: space-evenly; width: 100%;}
+
+/* Align items "center" & justify content variants */
+.f-center-start,   .f-c-s { align-items: center; justify-content: flex-start; }
+.f-center-center,  .f-c-c { align-items: center; justify-content: center; }
+.f-center-end,     .f-c-e { align-items: center; justify-content: flex-end; }
+.f-center-between, .f-c-b { align-items: center; justify-content: space-between; width: 100%;}
+.f-center-around,  .f-c-a { align-items: center; justify-content: space-around; width: 100%;}
+.f-center-evenly, .f-c-even { align-items: center; justify-content: space-evenly; width: 100%;}
+
+/* Align items "end" & justify content variants */
+.f-end-start,   .f-e-s { align-items: flex-end; justify-content: flex-start; }
+.f-end-center,  .f-e-c { align-items: flex-end; justify-content: center; }
+.f-end-end,     .f-e-e { align-items: flex-end; justify-content: flex-end; }
+.f-end-between, .f-e-b { align-items: flex-end; justify-content: space-between; width: 100%;}
+.f-end-around,  .f-e-a { align-items: flex-end; justify-content: space-around; width: 100%;}
+.f-end-evenly, .f-e-even  { align-items: flex-end; justify-content: space-evenly; width: 100%;}
+
+/* Flex shorthand classes where [label] is applied to align-items and justify-content */
+.f-start, .f-s { align-items: start; justify-content: start; }
+.f-center, .f-c { align-items: center; justify-content: center; }
+.f-end, .f-e { align-items: end; justify-content: end; }
+
+/* Apply stretch to element so it stretches to fill parent container. Useful for grid children or elements with .f-col */
+.f-stretch {
+  justify-content: stretch;
+  align-self: stretch;
+}

@@ -1,0 +1,47 @@
+@import url('./zen.css');
+
+/* ### GRID LAYOUTS ### */
+
+/* Generic grid classes
+  Grids are specified by "g-col" followed by the number of columns. 
+  > Specifying one number means that there will be that number of equal width (1fr) columns.
+  > Specifying more than one number means that each number given is the width of that column.
+  
+  Examples:
+  "g-col-4" creates a grid with 4 columns.
+  "g-col-2-1" creates a grid with two columns of 2fr and 1fr width.
+*/
+.grid,
+.g-col-1, .g-col-2,
+.g-col-3, .g-col-4,
+.g-col-1-2, .g-col-2-1 {
+  display: grid;
+  gap: var(--l);
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Equal column grid controllers */
+.g-col-1 { grid-template-columns: repeat(1, 1fr); }
+.g-col-2 { grid-template-columns: repeat(2, 1fr); }
+.g-col-3 { grid-template-columns: repeat(3, 1fr); }
+.g-col-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Asymmetric grids */
+.g-col-1-2 { grid-template-columns: 1fr 2fr; }
+.g-col-2-1 { grid-template-columns: 2fr 1fr; }
+
+/* Basic media queries */
+@media screen and (max-width: 1024px) {
+  .g-col-2, .g-col-3 { grid-template-columns: 1fr; }
+  .g-col-4, .g-col-1-2, .g-col-2-1 { grid-template-columns: 1fr 1fr; }
+}
+
+@media screen and (max-width: 768px) {
+  .g-col-4, .g-col-1-2, .g-col-2-1 { grid-template-columns: 1fr; }
+}
+
+/* ### GRID CHILD ORDERING ### 
+  Unlike flex, grids don't support flex direction, so we can use the "order" property to control the order of grid child elements.
+  (WIP)
+*/

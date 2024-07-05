@@ -1,0 +1,20 @@
+@import url("../classes/images.css");
+
+/* ### IMAGES ### */
+
+img {
+  max-width: 100%;
+  object-fit: cover;  
+}
+
+.logo {
+  object-fit: contain;
+  height: var(--xl);
+  width: auto;
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

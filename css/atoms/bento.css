@@ -3,34 +3,23 @@
 
 @import url('../zen.css');
 
-.bento {
+/* Use the .bento classes in conjunction with the .bg-[color] classes to control color styles (view in ./classes/colors.css) */
+
+.bento,
+.bento-s {
   display: flex;
   flex-direction: column;
-  gap: var(--m);
-  padding: var(--m);
   color: inherit;
   background-color: var(--white);
+}
+
+.bento {
+  gap: var(--m);
+  padding: var(--m);
   border-radius: var(--s);
 }
 
-.bento.primary {
-  color: var(--white);
-  background-color: var(--primary-5);
-}
-
-.bento.secondary {
-  color: var(--white);
-  background-color: var(--secondary-5);
-}
-
-.bento.l,
-.bento.large {
-  gap: var(--l);
-  padding: var(--l);
-}
-
-.bento.s,
-.bento.small {
+.bento-s {
   gap: var(--s);
   padding: var(--s);
   border-radius: var(--xs);
