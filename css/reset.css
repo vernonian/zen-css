@@ -1,8 +1,4 @@
-@import url("./variables/units.css");
-
-/* ### RESET ###
-  Basic style resets 
-*/
+/* ### RESET ### */
 
 /* Enable smooth scrolling to anchor links */
 html { scroll-behavior: smooth; }

@@ -4,6 +4,7 @@ const concat = require('gulp-concat');
 
 const combineAndMinify = () => {
   return gulp.src([
+    './css/reset.css',
     './css/variables/colors.css',
     './css/variables/units.css',
     './css/variables/elevations.css',
