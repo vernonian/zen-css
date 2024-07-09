@@ -1,24 +1,7 @@
-/* ### TEXT.CSS ### */
+/* ### TEXT.CSS ### 
+  > Variables for controling text are located in ./variables/typography.css
+*/
 
-/* === VARIABLES === */
-:root {
-  /* Font families */
---fontfamily-serif: serif;
---fontfamily-sans: sans-serif;
---fontfamily-mono: monospace;
-
-/* Line spacing */
---lineheight-heading: 1.1;
---lineheight-body: 1.5;
-
-/* Font weights */
---fontweight-bl: 800; /* Black */
---fontweight-b:  700; /* Bold */
---fontweight-sb: 600; /* Semi Bold */
---fontweight-m:  500; /* Medium */
---fontweight-r:  400; /* Regular */
---fontweight-l:  300; /* Light */
-}
 
 /* === RESET === */
 h1, h2, h3, h4, h5, h6,
